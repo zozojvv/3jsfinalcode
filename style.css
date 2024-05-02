@@ -13,6 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -28,7 +29,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
+  font-family: 'VT323', monospace;}
 
 h1 {
   font-size: 3.2em;
@@ -74,9 +75,9 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
+/* button:hover {
   border-color: #646cff;
-}
+} */
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -93,4 +94,78 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+#musicBtn{
+  position: absolute;
+  width: 100px;
+  height: 70px;
+  top: 45%;
+  left: 90%;
+  background-color: transparent;
+
+}
+#musicBtn2{
+  position: absolute;
+  width: 100px;
+  height: 70px;
+  top: 55%;
+  left: 90%;
+  background-color: transparent;
+}
+#pauseimg, #playimg{
+  width: 50px;
+  height: 50px;
+}
+
+#header {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+#proceed {
+  position: absolute;
+  top: 92%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+
+
+h1 {
+  font-size: 32px;
+  background-color: red;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+#proceed h2 {
+  animation: blink 3s infinite;
+}
+
+#progress {
+  width: 200px;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+#progress-bar {
+  width: 0%;
+  height: 100%;
+  background-color: #4CAF50;
+  border-radius: 5px;
 }

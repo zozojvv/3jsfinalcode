@@ -10,7 +10,7 @@ export function environment() {
 		'pz.png',
 		'nz.png',
 	])
-    console.log(environmentMap)
+    // console.log(environmentMap)
 	return environmentMap
 }
 

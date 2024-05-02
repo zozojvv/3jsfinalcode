@@ -4,11 +4,29 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite App</title>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <button id="musicBtn"><img id="pauseimg" src="pause.png"></button>
+  <button id="musicBtn2"><img id="playimg" src="play.png"></button>
+
+  <!-- <input type="range" id="opacitySlider" min="0" max="1" step="0.01" value="1"> -->
+
+  <div id="header">
+    <h1>System Activated. Transfer information to this Device.</h1>
+  </div>
+  <div id="proceed">
+    <h2>Press "A" and Click Anywhere to Proceed </h2>
+  </div>
+
+  <div id="progress">
+    <div id="progress-bar"></div>
+</div>
+
   <video 
     id="video"
     playsinline
@@ -21,8 +39,22 @@
     src="../error.mp4"
     style="display: none;"
   ></video>
+
+    <video 
+    id="video2"
+    playsinline
+    webkit-playsinline
+    muted
+    loop
+    autoplay
+    width="1290"
+    height="1040"
+    src="../error2.mp4"
+    style="display: none;"
+  ></video>
+
   <video 
-  id="video2"
+  id="video3"
   playsinline
   webkit-playsinline
   muted
@@ -30,10 +62,107 @@
   autoplay
   width="1290"
   height="1040"
-  src="../error2.mp4"
+  src="../comp2.mp4"
   style="display: none;"
-></video>
+  ></video>
+
+  <video 
+  id="video4"
+  playsinline
+  webkit-playsinline
+  muted
+  loop
+  autoplay
+  width="1290"
+  height="1040"
+  src="../comp3.mp4"
+  style="display: none;"
+  ></video>
+
+  <video 
+  id="video5"
+  playsinline
+  webkit-playsinline
+  muted
+  loop
+  autoplay
+  width="1290"
+  height="1040"
+  src="../comp4.mp4"
+  style="display: none;"
+  ></video>
+
+  <!-- // id video6 -->
+  <video 
+  id="video6"
+  playsinline
+  webkit-playsinline
+  muted
+  loop
+  autoplay
+  width="1290"
+  height="1040"
+  src="../comp5.mp4"
+  style="display: none;"
+  ></video>
+
+  <video 
+  id="video7"
+  playsinline
+  webkit-playsinline
+  muted
+  loop
+  autoplay
+  width="1290"
+  height="1040"
+  src="../comp6.mp4"
+  style="display: none;"
+  ></video>
+
+  <video 
+  id="video8"
+  playsinline
+  webkit-playsinline
+  muted
+  loop
+  autoplay
+  width="1290"
+  height="1040"
+  src="../comp7.mp4"
+  style="display: none;"
+  ></video>
+
+  <video 
+  id="video9"
+  playsinline
+  webkit-playsinline
+  muted
+  loop
+  autoplay
+  width="1290"
+  height="1040"
+  src="../comp8.mp4"
+  style="display: none;"
+  ></video>
+
   <script type="module" src="/main.js"></script>
+  <script>
+    var source = "/oceanplastic.mp3"
+    var audio = document.createElement("audio");
+    audio.load();
+    audio.autoplay = true;
+    audio.addEventListener("load", function() {
+      audio.play();
+    }, true);
+    audio.src = source;
+
+    document.getElementById('musicBtn').addEventListener('click', function() {
+      audio.pause();
+    });
+    document.getElementById('musicBtn2').addEventListener('click', function() {
+      audio.play();
+    });
+  </script>
 </body>
 
 </html>
